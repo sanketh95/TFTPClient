@@ -2,17 +2,15 @@ A simple implementation of a TFTP client. Supports both OCTET and NETASCII modes
 
 Requirements : Linux, gcc
 
-**********************COMPILING************************
-Instructions:
+### Compiling
 
-1) Run `./compile.sh` and check if the executable client is produced.
-2) If permissions are denied, run `sudo chmod +x compile.sh` and repeat step 1.
+* Run `./compile.sh` and check if the executable client is produced.
+* If permissions are denied, run `sudo chmod +x compile.sh` and repeat step 1.
 
-*********************HOW TO RUN ?***************************
-Instrucions:
+### How to Run ?
 
-1) Run `./client -h` to see the usage instructions. Here's how it looks
-
+* Run `./client -h` to see the usage instructions. Here's how it looks
+```
 Usage:
 
 client [-h] [type] [filepath] [hostname] [port]
@@ -29,13 +27,11 @@ Type:
 filepath	Path to file to read or write
 hostname	IP Address or hostname
 port		Optional.Default is 69
+```
 
+### Source Documentation
 
-2) For better performance redirect the output to some dumpfile.
-
-*********************SOURCE DOCUMENTATION****************************
-Note : All the source files are documented inline.
-
+```
 1) All the source files related to different packet types are in ./types folder.
 
 ./TYPES:
@@ -55,3 +51,4 @@ packet.h         --- Contains the packet structure, constants and declarations o
 packet.c         --- Contains definitions of functions for packet handling.
 client.c         --- Contains the actual client handling functions.
 main.c           --- Contains code that checks for correct arguments and call start_client().
+```
